@@ -1,87 +1,246 @@
-Team Chat – Real-Time Collaboration App
-A full-stack, Slack-like team chat application built with React, Node.js, Express, MongoDB, and Socket.IO.
-This project includes user authentication, real-time messaging, online user presence, typing indicators, and channel-based communication.
+📌 Team Chat – Real-Time Collaboration App (Slack-Like)
 
-Overview
-Team Chat is a real-time communication application that allows multiple users to chat inside channels.
-It supports features like real-time messages, presence updates, typing indicators, message history, and more.
+Team Chat is a modern real-time messaging application built with React, Node.js, Express, MongoDB, and Socket.IO.
+It supports channel-based communication, presence tracking, typing indicators, authentication, and instant messaging — similar to Slack or Discord.
 
-Features
-• User Sign Up and Login (JWT Authentication)
-• Stay logged in after refresh
-• Create and view channels
-• Join and leave channels
-• Real-time messaging using Socket.IO
-• Online/Offline user presence indicator
-• Typing indicator ("User is typing...")
-• Message history fetched from backend
-• Pagination support for older messages (optional extension)
-• Protected routes on frontend
-• Fully responsive UI using Tailwind CSS
+This project was built as part of a Full-Stack Internship Assignment to demonstrate clean architecture, scalable backend structure, and real-time communication.
 
-Tech Stack
-Frontend:
-• React
-• React Router
-• Tailwind CSS
-• Axios
-• Socket.IO Client
+🚀 Features
+🔐 Authentication
 
-Backend:
-• Node.js
-• Express.js
-• MongoDB + Mongoose
-• JWT Authentication
-• Socket.IO
-• CORS
+User Signup
 
-Hosting:
-• Backend hosted on Render
-• Frontend hosted on Vercel (recommended)
-• MongoDB Atlas used as cloud database
+User Login
 
-Project Structure
-Backend contains routes, models, authentication, and real-time events.
-Frontend contains pages, components, socket client, and API integration.
+JWT-based authentication
 
-Setup Instructions
-Backend Setup:
+Stay logged in after refresh
 
-Install dependencies using: npm install
+💬 Real-Time Chat
 
-Create an .env file and add:
-• MONGO_URI = your MongoDB URI
-• JWT_SECRET = your secret key
-• PORT = 4000 (or provided by hosting)
+Send & receive messages instantly
 
-Start server using: node server.js
+Messages saved in MongoDB
 
-Frontend Setup:
+Message history loading
 
-Install dependencies: npm install
+🧵 Channels
 
-Update the API base URL in src/api.js
+Create channels
 
-Update socket URL in src/socket.js
+View all channels
 
-Start frontend: npm run dev
+Join & leave channels
 
-Deployment Notes
-Backend:
-Deploy on Render.
-Enable WebSockets.
-Add environment variables.
+Each channel has its own chat room
 
-Frontend:
-Deploy on Vercel.
-Set React build command automatically.
-Ensure API base URL is pointed to Render backend.
+🟢 Presence
 
-Optional Enhancements
-• Private channels
-• Message editing/deleting
-• Search messages
-• File uploads
-• Dark mode
-• Notifications
-• Role-based access
+Online/offline user list
+
+Multi-tab support
+
+Updates instantly when a user connects or disconnects
+
+✏️ Typing Indicator
+
+“User is typing…” is shown in real-time
+
+Auto-disappears after inactivity
+
+🎨 Frontend UI
+
+Responsive design
+
+Built with Tailwind CSS
+
+Clean layout with sidebar + chat window
+
+🌐 Deployment Ready
+
+Backend deployable on Render
+
+Frontend deployable on Vercel
+
+Works with MongoDB Atlas
+
+📁 Project Structure
+Team-Chat/
+│
+├── backend/
+│   ├── models/
+│   ├── routes/
+│   ├── server.js
+│   ├── package.json
+│   └── .env
+│
+└── frontend/
+    ├── src/
+    │   ├── pages/
+    │   ├── components/
+    │   ├── api.js
+    │   ├── socket.js
+    │   └── App.jsx
+    ├── index.html
+    ├── package.json
+    └── tailwind.config.cjs
+
+⚙️ Backend Setup
+1. Install dependencies
+cd backend
+npm install
+
+2. Create .env file
+MONGO_URI = your_mongodb_connection_string
+JWT_SECRET = your_secret_key
+PORT = 4000
+
+3. Start backend
+node server.js
+
+
+Expected output:
+
+Server running on 4000
+
+💻 Frontend Setup
+1. Install dependencies
+cd frontend
+npm install
+
+2. Configure API URL
+
+In src/api.js:
+
+baseURL: "http://localhost:4000/api",
+
+3. Configure Socket.io URL
+
+In src/socket.js:
+
+io("http://localhost:4000", { auth: { token } })
+
+4. Start frontend
+npm run dev
+
+
+Open browser:
+
+http://localhost:5173
+
+🧪 How to Test the Application
+✔ Signup
+
+Create a new account → redirects to chat
+
+✔ Login
+
+Enter credentials → redirects to chat
+
+✔ Channels
+
+Create channel
+
+Click to join channel
+
+Chat window loads
+
+✔ Real-time messaging
+
+Open two browsers → messages sync instantly
+
+✔ Typing indicator
+
+Typing in Window A shows indicator in Window B
+
+✔ Online presence
+
+Open multiple windows → online users list updates
+
+🌍 Deployment
+🔹 Backend Deployment (Render)
+
+Push project to GitHub
+
+Create Render Web Service
+
+Root Directory → backend
+
+Build Command → npm install
+
+Start Command → node server.js
+
+Add environment variables
+
+Enable WebSockets
+
+🔹 Frontend Deployment (Vercel)
+
+Import project from GitHub
+
+Root Directory → frontend
+
+Build Command → npm run build
+
+Output Directory → dist
+
+Add environment variable:
+
+VITE_API_URL = https://your-backend-url
+
+Deploy
+
+🧩 Optional Features (Bonus)
+
+You may implement additional features:
+
+Private channels
+
+Message editing/deletion
+
+Pagination for older messages
+
+Search messages
+
+File uploads
+
+Emojis & reactions
+
+User profiles
+
+Dark mode
+
+Add any implemented bonus features in this README later.
+
+🎬 Screen Recording Requirements
+
+Record a 8–15 minute video showing:
+
+Signup + login
+
+Creating, joining, and leaving channels
+
+Realtime chat between two windows
+
+Online presence
+
+Typing indicators
+
+Message history
+
+Code walkthrough:
+
+Folder structure
+
+Backend routes
+
+Authentication flow
+
+Socket.IO events
+
+Design decisions
+
+👤 Author
+
+Developed by Pradeep Kumar Jangir
+Part of a Full-Stack Assignment.
