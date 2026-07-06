@@ -190,55 +190,7 @@ VITE_API_URL = https://your-backend-url
 
 Deploy
 
-🧩 Optional Features (Bonus)
 
-You may implement additional features:
-
-Private channels
-
-Message editing/deletion
-
-Pagination for older messages
-
-Search messages
-
-File uploads
-
-Emojis & reactions
-
-User profiles
-
-Dark mode
-
-Add any implemented bonus features in this README later.
-
-🎬 Screen Recording Requirements
-
-Record a 8–15 minute video showing:
-
-Signup + login
-
-Creating, joining, and leaving channels
-
-Realtime chat between two windows
-
-Online presence
-
-Typing indicators
-
-Message history
-
-Code walkthrough:
-
-Folder structure
-
-Backend routes
-
-Authentication flow
-
-Socket.IO events
-
-Design decisions
 
 👤 Author
 
